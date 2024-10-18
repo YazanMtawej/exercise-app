@@ -1,9 +1,16 @@
-class ExerciseModel {
-  final String title;
+import 'package:hive/hive.dart';
+@HiveType(typeId: 0)
+class ExerciseModel  extends HiveObject{
 
-  final String subTitle;
+@HiveField(0)
+  final String title;
+@HiveField(1)
+  final String sets;
+  @HiveField(2)
+  final String wieghts;
+  @HiveField(3)
   final String date;
 
-  ExerciseModel(
-      {required this.title, required this.subTitle, required this.date});
+  ExerciseModel(this.wieghts, 
+      {required this.title, required this.sets, required this.date});
 }
