@@ -1,4 +1,9 @@
 import 'package:hive/hive.dart';
+
+
+part 'exercise_model.g.dart';
+
+
 @HiveType(typeId: 0)
 class ExerciseModel  extends HiveObject{
 
