@@ -1,4 +1,4 @@
-import 'package:exercise_app/views/chest_view.dart';
+import 'package:exercise_app/views/muscles_view.dart';
 import 'package:exercise_app/widgets/custom_appbar.dart';
 import 'package:exercise_app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +24,7 @@ class ExerciseView extends StatelessWidget {
               onTap: (){
 
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return ChestView();
+                  return const MusclesView();
                 }));
               },
             ),
