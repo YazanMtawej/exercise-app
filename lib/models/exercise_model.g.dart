@@ -17,9 +17,9 @@ class ExerciseModelAdapter extends TypeAdapter<ExerciseModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return ExerciseModel(
-      fields[2] as String,
       title: fields[0] as String,
       sets: fields[1] as String,
+      wieghts: fields[2] as String,
       date: fields[3] as String,
     );
   }

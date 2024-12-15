@@ -1,7 +1,8 @@
-import 'package:bloc/bloc.dart';
+
 import 'package:exercise_app/constants.dart';
 import 'package:exercise_app/models/exercise_model.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 
 

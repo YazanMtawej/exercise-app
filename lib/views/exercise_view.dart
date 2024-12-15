@@ -8,21 +8,35 @@ class ExerciseView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
      
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 24),
-        child: Column(
+        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 24),
+        child: ExerciseListViewBody()
+      ),
+    );
+  }
+}
+
+class ExerciseListViewBody extends StatelessWidget {
+  const ExerciseListViewBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+    
           children: [
             CustomAppBar(
               title: 'Exercise App',
               icon: Icons.search,
               onPressed: () {},
             ),
+            const SizedBox(height: 10,),
+            const Text("Welcome in exercise app chose your muscle",style: TextStyle(fontSize: 16),),
             CustomText(
               title: 'Chest',
               onTap: (){
-
+    
                 Navigator.push(context, MaterialPageRoute(builder: (context){
                   return const MusclesView();
                 }));
@@ -50,9 +64,6 @@ class ExerciseView extends StatelessWidget {
               title: 'Abdominal muscles',
             ),
           ],
-        ),
-      ),
-    );
+        );
   }
 }
-
